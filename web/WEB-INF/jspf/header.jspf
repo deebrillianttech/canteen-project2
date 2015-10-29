@@ -1,0 +1,90 @@
+<%--
+    Document   : index
+    Created on : Jan 6, 2015, 10:06:21 AM
+    Author     : ataulislam.raihan
+--%>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%
+    String title = "";
+    try {
+        title = request.getAttribute("pageTitle").toString();
+    } catch (Exception e) {
+        title = "Login";
+    }
+%>
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title><%=title%> - Canteen Automation System</title>
+
+        <!-- Bootstrap CSS -->
+        <link href="<c:url value="/css/bootstrap.min.css" />" rel="stylesheet">
+        <link href="<c:url value="/css/font-awesome.min.css" />" rel="stylesheet">
+        <link href="<c:url value="/css/style.css" />" rel="stylesheet">
+        <link href="<c:url value="/css/datepicker.css" />" rel="stylesheet">
+        <link href="<c:url value="/css/responsive-calendar.css" />" rel="stylesheet">
+        <link href="<c:url value="/css/select2.min.css" />" rel="stylesheet">
+        <link href="<c:url value="/css/jasny-bootstrap.min.css" />" rel="stylesheet">
+        
+        <!-- jQuery -->
+        <script src="<c:url value="/js/jquery.min.js" />"></script>
+        <script src="<c:url value="/js/jquery.validate.js" />"></script>
+        <script src="<c:url value="/js/script.js" />"></script>
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <noscript>
+            <style type="text/css">
+                .container {
+                    pointer-events: none; position:fixed;
+                    top:30; left:0;
+                    background-color:black;
+                    width:100%; height:100%;
+                    opacity:0.5;
+                }
+            </style>
+            <div style="color:#fff; background-color: #d43f3a; text-align: center; font-size: 20px;">
+                You don't have javascript enabled. Good luck with that.
+            </div>
+        </noscript>
+        
+        
+        <div class="container">
+            <div id="header" class="well well-sm">
+                <h3>Canteen Automation System</h3>
+            </div>
+            
+            <%@include file="/WEB-INF/jspf/topNavBar.jspf" %>
+                        
+            <c:if test="${not empty error}">
+                <div class="alert alert-danger">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <i class="fa fa-times-circle"></i> 
+                    ${error}
+                </div>
+            </c:if>
+            
+            <div class="row">
+                <div id="leftNavBar" class="col-sm-3">
+                    <div class="panel panel-primary">
+                          <div class="panel-body">
+                              <%@include file="/WEB-INF/jspf/leftNavBar.jspf" %>
+                          </div>
+                    </div>
+                </div>
+
+                <div id="mainContent" class="col-sm-9">
+                    <div class="panel panel-primary">
+                          <div class="panel-body">

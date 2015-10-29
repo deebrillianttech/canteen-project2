@@ -1,0 +1,38 @@
+body{ font-size: 10pt; background-color: #2b669a; }
+#header{ margin-bottom: 0; }
+#topNavBar{ margin-bottom: 5px; }
+.panel{ border-radius: 0; }
+
+@media (min-width: 768px) {
+    #leftNavBar { padding-right: 0;}
+    #leftNavBar a{text-decoration: none; }
+    #mainContent{ padding-left: 5px; }
+}
+@media (min-width: 992px) {
+    #leftNavBar { padding-right: 0;}
+    #leftNavBar a{text-decoration: none; }
+    #mainContent{ padding-left: 5px; }
+}
+@media (min-width: 1200px) {
+    #leftNavBar { padding-right: 0;}
+    #leftNavBar a{text-decoration: none; }
+    #mainContent{ padding-left: 5px; }
+}
+
+div small.error { color: #B94A48; /* color to match Bootstraps error class */ }
+.media{ background-color: #EAF8FF; padding: 5px; }
+.media:hover{ background-color: #D4F1FF; }
+.media .media-body{ width: 100%; }
+#myTray .panel-body, #myOrders .panel-body{ padding: 5px; }
+#myTray .list-group, #myOrders .list-group { margin-bottom: 0; }
+#myTray .list-group-item, #myOrders .list-group-item{ padding: 5px; }
+
+#todaysOrders .panel-body{ max-height: 350px; overflow-y: auto;}
+#todaysOrders .panel-body{ padding: 5px; }
+#todaysOrders .list-group { margin-bottom: 0; }
+
+#scheduleCalendar .day .badge{padding: 2px; top: 0px; font-weight: normal; background-color: red; font-size: .8em;}
+/*#scheduleCalendar .badge{font-size: .5em; background: transparent; color: red;}
+#scheduleCalendar .day {margin: 1px;}
+#scheduleCalendar .day a {padding: 0;}*/
+#footer{background-color: #ccc; padding: 5px;}

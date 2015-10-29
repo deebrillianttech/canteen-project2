@@ -1,0 +1,27 @@
+<%--
+    Document   : index
+    Created on : Jan 6, 2015, 10:06:21 AM
+    Author     : ataulislam.raihan
+--%>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    
+                        </div>
+                    </div>
+                    
+                    <div id="footer" class="text-center">
+                        Copyright &copy; <a href="//bracits.com" target="_blank">biTS</a>
+                    </div>
+                </div>
+                
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        
+    <!-- Bootstrap JavaScript -->
+    <script src="<c:url value="/js/bootstrap.min.js" />"></script>
+    <script src="<c:url value="/js/bootstrap-datepicker.js" />"></script>
+    <script src="<c:url value="/js/responsive-calendar.min.js" />"></script>
+    <script src="<c:url value="/js/jasny-bootstrap.min.js" />"></script>
+    </body>
+</html>
